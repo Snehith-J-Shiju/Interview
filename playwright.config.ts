@@ -11,8 +11,8 @@ export default defineConfig({
   testDir,
   fullyParallel: true,
   forbidOnly: !!process.env.CI, 
-  retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 2 : undefined,
+  // retries: process.env.CI ? 2 : 0,
+  workers: process.env.CI ? 1 : undefined,
 
   reporter: 'html',
 
@@ -23,7 +23,7 @@ export default defineConfig({
     video: 'retain-on-failure',
     actionTimeout: 10_000,
     navigationTimeout: 30_000, 
-    headless: false, 
+    headless: true, 
   },
 
   projects: [
