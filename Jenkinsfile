@@ -4,6 +4,9 @@ pipeline {
     // triggers {
     //     cron('0 9 * * *')
     // }
+    environment {
+        CI = 'true'
+    }
 
     stages {
         stage('Checkout') {
